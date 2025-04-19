@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: ${appname}
+    annotations:
+      strategy.spinnaker.io/recreate: 'true'
+    labels:
+      app: ${appname}-service
+spec:
+  type: NodePort
+  selector: 
+    appName: ${appname}
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30280

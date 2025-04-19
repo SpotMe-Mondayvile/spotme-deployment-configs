@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${appname}
+  labels:
+    app: ${appname}
+    type: back-end
+spec:
+  template:
+    spec:
+      containers:
+        - name: ${appname}
+          image: containerregistry.spot-me-app.com/spotme/spotme-rest
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
+    metadata:
+      name: ${appname}
+      labels:
+        app: ${appname}
+        type: back-end
+        project: spotme
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${appname}

@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: spotme-dev
+
+commonLabels:
+  serviceGroup: spotme-rest
+
+resources:
+  - spotme-configmap.yml
+  - spotme-rest-service.yml
+
+images:
+  name: app-image
+  newName: containerregistry.spot-me-app.com/spotme/spotme-rest
+  newTag: develop
+
+patches:
+- path: spotme-rest-service.yml
+  target:
+    namespace: spotme-dev
+
+- spotme-backend-deployment.yml
+
