@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spotme-rest
+  name: ${appname}
   annotations:
       strategy.spinnaker.io/recreate: 'true'
   labels:
-    app: spotme-rest
+    app: ${appname}
     type: back-end
 spec:
   template:
