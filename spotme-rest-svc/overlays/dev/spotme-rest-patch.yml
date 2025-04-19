@@ -11,10 +11,6 @@ metadata:
 spec:
   template:
     metadata:
-      name: ${appname}
-      labels:
-        app: ${appname}
-        type: back-end
     spec:
       containers:
         - name: ${appname}
