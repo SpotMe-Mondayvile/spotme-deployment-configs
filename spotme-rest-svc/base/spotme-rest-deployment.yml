@@ -21,8 +21,6 @@ spec:
           image: app-image
           ports:
             - containerPort: 8080
-      imagePullSecrets:
-        - name: regcred
   replicas: 1
   selector:
     matchLabels:

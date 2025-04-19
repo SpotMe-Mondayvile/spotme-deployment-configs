@@ -17,8 +17,7 @@ spec:
         type: back-end
     spec:
       containers:
-        - name: spotme-rest
-          image: containerregistry.spot-me-app.com/spotme/spotme-rest:develop
+        - name: ${appname}
           imagePullPolicy: Always
           resources:
             requests:
@@ -27,8 +26,6 @@ spec:
             limits:
               memory: "3000Mi"
               cpu: "1000m"
-          ports:
-            - containerPort: 8080
           envFrom:
             - configMapRef:
                 name: spotme-config
@@ -36,7 +33,3 @@ spec:
                 name: spotme-db-secrets
       imagePullSecrets:
         - name: jfrog-dev
-  replicas: 1
-  selector:
-    matchLabels:
-      app: spotme-rest
