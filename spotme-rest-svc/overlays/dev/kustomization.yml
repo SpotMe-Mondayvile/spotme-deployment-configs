@@ -11,9 +11,9 @@ resources:
   - spotme-rest-service.yml
 
 images:
-  name: app-image
-  newName: containerregistry.spot-me-app.com/spotme/spotme-rest
-  newTag: develop
+  - name: app-image
+    newName: containerregistry.spot-me-app.com/spotme/spotme-rest
+    newTag: develop
 
 patches:
 - path: spotme-rest-service.yml

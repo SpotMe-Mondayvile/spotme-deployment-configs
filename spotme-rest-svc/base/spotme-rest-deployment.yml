@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: ${appname}
-          image: containerregistry.spot-me-app.com/spotme/spotme-rest
+          image: app-image
           ports:
             - containerPort: 8080
       imagePullSecrets:
