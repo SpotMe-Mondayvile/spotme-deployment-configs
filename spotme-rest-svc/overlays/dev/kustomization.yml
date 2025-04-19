@@ -13,12 +13,8 @@ resources:
 images:
   - name: app-image
     newName: containerregistry.spot-me-app.com/spotme/spotme-rest
-    newTag: develop
+    newTag: "develop"
 
 patches:
-- path: spotme-rest-service.yml
-  target:
-    namespace: spotme-dev
-
-- spotme-backend-deployment.yml
+- spotme-rest-patch.yml 
 
