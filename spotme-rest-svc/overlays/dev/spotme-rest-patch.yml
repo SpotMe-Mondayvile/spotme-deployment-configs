@@ -6,7 +6,7 @@ metadata:
   annotations:
       strategy.spinnaker.io/recreate: 'true'
   labels:
-    app: ${appname}
+    appName: ${appname}
     type: back-end
 spec:
   template:

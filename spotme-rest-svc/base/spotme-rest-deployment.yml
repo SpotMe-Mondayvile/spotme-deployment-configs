@@ -6,14 +6,14 @@ metadata:
   annotations:
       strategy.spinnaker.io/recreate: 'true'
   labels:
-    app: ${appname}
+    appName: ${appname}
     type: back-end
 spec:
   template:
     metadata:
       name: ${appname}
       labels:
-        app: ${appname}
+        appName: ${appname}
         type: back-end
     spec:
       containers:
@@ -24,4 +24,4 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ${appname}
+      appName: ${appname}
