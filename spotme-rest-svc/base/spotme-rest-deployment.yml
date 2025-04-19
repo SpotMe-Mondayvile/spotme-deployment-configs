@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ${appname}
+  namespace: ${namespace}
   annotations:
       strategy.spinnaker.io/recreate: 'true'
   labels:
