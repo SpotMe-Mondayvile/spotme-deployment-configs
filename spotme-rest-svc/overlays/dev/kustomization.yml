@@ -10,8 +10,7 @@ commonLabels:
 resources:
   - ../../base
   - spotme-configmap.yml
-  - spotme-rest-service.yml
-
+  
 images:
   - name: app-image
     newName: containerregistry.spot-me-app.com/spotme/spotme-rest
@@ -19,4 +18,5 @@ images:
 
 patches:
 - spotme-rest-patch.yml 
+- spotme-rest-service-dev.yml
 
