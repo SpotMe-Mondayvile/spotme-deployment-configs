@@ -4,7 +4,8 @@ kind: Kustomization
 namespace: spotme-dev
 
 commonLabels:
-  serviceGroup: spotme-rest
+  # serviceGroup: spotme-rest
+  project: spotme
 
 resources:
   - spotme-configmap.yml

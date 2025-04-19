@@ -10,11 +10,10 @@ metadata:
 spec:
   template:
     metadata:
-      name: spotme-rest
+      name: ${appname}
       labels:
-        app: spotme-rest
+        app: ${appname}
         type: back-end
-        project: spotme
     spec:
       containers:
         - name: spotme-rest

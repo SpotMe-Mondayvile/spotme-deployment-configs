@@ -9,6 +9,11 @@ metadata:
     type: back-end
 spec:
   template:
+    metadata:
+      name: ${appname}
+      labels:
+        app: ${appname}
+        type: back-end
     spec:
       containers:
         - name: ${appname}
@@ -17,12 +22,6 @@ spec:
             - containerPort: 8080
       imagePullSecrets:
         - name: regcred
-    metadata:
-      name: ${appname}
-      labels:
-        app: ${appname}
-        type: back-end
-        project: spotme
   replicas: 1
   selector:
     matchLabels:
