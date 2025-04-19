@@ -8,6 +8,7 @@ commonLabels:
   project: spotme
 
 resources:
+  - ../base
   - spotme-configmap.yml
   - spotme-rest-service.yml
 
