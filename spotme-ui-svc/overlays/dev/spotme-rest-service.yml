@@ -5,11 +5,11 @@ metadata:
     annotations:
       strategy.spinnaker.io/recreate: 'true'
     labels:
-      app: backend-service
+      appName: backend-service
 spec:
   type: NodePort
   selector: 
-    appName: spotme-rest
+    app: spotme-rest
   ports:
     - port: 8080
       targetPort: 8080
