@@ -1,0 +1,32 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ${namespace}
+
+commonLabels:
+  # serviceGroup: spotme-rest
+  project: spotme
+
+resources:
+  - ../../base
+  - spotme-configmap.yml
+  - spotme-myqsql-pv-test.yml
+  - spotme-myqsql-pvc-test.yml
+
+# patches:
+
+# - path: spotme-rest-service.yml
+#   target:
+#     namespace: spotme-dev
+# - path: spotme-ui-service.yml
+#   target:
+#     namespace: spotme-dev
+# - path: spotme-db-service.yml
+#   target:
+#     namespace: spotme-dev
+# - path: spotme-backend-deployment.yml
+#   target:
+#     namespace: spotme-dev
+# - path: spotme-frontend-deployment.yml
+#   target:
+#     namespace: spotme-dev
