@@ -9,11 +9,6 @@ spec:
   - ReadWriteOnce
   capacity:
     storage: 5Gi
-  claimRef:
-    apiVersion: v1
-    kind: PersistentVolumeClaim
-    name: spotme-mysql-pvc-dev
-    namespace: spotme-dev
   hostPath:
     path: /mnt/data-sm-dev
     type: ""
