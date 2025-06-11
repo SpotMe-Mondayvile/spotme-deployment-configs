@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spotme-db-service
+  name: ${appname}
   labels:
     app: db-service
 spec:

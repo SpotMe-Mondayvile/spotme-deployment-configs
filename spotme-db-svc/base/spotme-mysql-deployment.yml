@@ -1,41 +1,43 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spotme-db
+  name: ${appname}
+  namespace: ${namespace}
+  annotations:
+    strategy.spinnaker.io/recreate: 'true'
   labels:
-    app: spotme-db
+    app: ${label}
 spec:
   selector:
     matchLabels:
-      app: spotme-db
+      app: ${label}
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: spotme-db
+        app: ${label}
     spec:
       containers:
         - image: mysql:8.0-debian
-          name: spotme-db
-          env:
-            - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: spotme-app-secrets-dev
-                  key: password
-            - name: DB_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: spotme-app-secrets-dev
-                  key: username
+          name: ${appname}
+          resources:
+            requests:
+              memory: "1000Mi"
+              cpu: "500m"
+            limits:
+              memory: "3000Mi"
+              cpu: "1000m"
+          envFrom:
+            - secretRef:
+                name: spotme-db-secrets
           ports:
             - containerPort: 3306
               name: mysql
           volumeMounts:
-            - name: spotme-mysql-storage-dev
+            - name: spotme-mysql-storage-${environment}
               mountPath: /var/lib/mysql
       volumes:
-        - name: spotme-mysql-storage-dev
+        - name: spotme-mysql-storage-${environment}
           persistentVolumeClaim:
-            claimName: spotme-mysql-pvc-dev
+            claimName: spotme-mysql-pvc-${environment}
