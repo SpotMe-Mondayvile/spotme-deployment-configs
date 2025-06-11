@@ -5,11 +5,11 @@ metadata:
     annotations:
       strategy.spinnaker.io/recreate: 'true'
     labels:
-      app: ${appname}
+      appName: ${appname}
 spec:
   ports:
     - port: 8080
       targetPort: 8080
       nodePort: 30280
   selector:
-    appName: ${appname}
+    app: ${appname}
