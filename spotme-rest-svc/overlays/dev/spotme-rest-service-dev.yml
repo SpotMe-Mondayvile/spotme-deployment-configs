@@ -4,12 +4,11 @@ metadata:
     name: ${appname}
     annotations:
       strategy.spinnaker.io/recreate: 'true'
-    labels:
-      appName: ${appname}
 spec:
   ports:
     - port: 8080
       targetPort: 8080
       nodePort: 30280
+      protocol: TCP
   selector:
     app: ${appname}
