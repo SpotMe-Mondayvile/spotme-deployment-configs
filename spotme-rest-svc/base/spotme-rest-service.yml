@@ -4,8 +4,6 @@ metadata:
     name: ${appname}
     annotations:
       strategy.spinnaker.io/recreate: 'true'
-    labels:
-      app: ${appname}
 spec:
   type: NodePort
   selector: 
