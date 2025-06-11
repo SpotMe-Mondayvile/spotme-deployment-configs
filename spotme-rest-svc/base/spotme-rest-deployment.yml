@@ -13,7 +13,7 @@ spec:
     metadata:
       name: ${appname}
       labels:
-        appName: ${appname}
+        app: ${appname}
         type: back-end
     spec:
       containers:
@@ -24,4 +24,4 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      appName: ${appname}
+      app: ${appname}
