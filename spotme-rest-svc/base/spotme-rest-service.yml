@@ -3,7 +3,7 @@ kind: Service
 metadata:
     name: ${appname}
     annotations:
-      strategy.spinnaker.io/recreate: 'true'
+      strategy.spinnaker.io/versioned: 'false'
 spec:
   type: NodePort
   selector: 

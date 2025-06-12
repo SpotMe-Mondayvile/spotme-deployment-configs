@@ -4,7 +4,8 @@ metadata:
   name: ${appname}
   namespace: ${namespace}
   annotations:
-      strategy.spinnaker.io/recreate: 'true'
+    strategy.spinnaker.io/versioned: 'false'
+    strategy.spinnaker.io/recreate: 'true'
   labels:
     app: ${appname}
     type: back-end
