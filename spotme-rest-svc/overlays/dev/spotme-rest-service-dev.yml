@@ -3,8 +3,9 @@ kind: Service
 metadata:
     name: ${appname}-svc
     annotations:
-      strategy.spinnaker.io/recreate: 'true'
+      strategy.spinnaker.io/recreate: 'false'
 spec:
+  type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
