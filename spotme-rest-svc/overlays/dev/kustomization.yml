@@ -9,8 +9,8 @@ commonLabels:
 
 resources:
   - ../../base
-  - spotme-configmap.yml
-  - spotme-rest-service.yml
+  - configmap.yml
+  - service.yml
   
 images:
   - name: app-image
@@ -18,5 +18,6 @@ images:
     newTag: "develop"
 
 patches:
-- spotme-rest-patch.yml 
+- replicaset-patch.yml 
+- service-patch.yml
 
