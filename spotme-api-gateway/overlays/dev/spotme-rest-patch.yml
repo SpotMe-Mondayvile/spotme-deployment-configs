@@ -23,13 +23,15 @@ spec:
           resources:
             requests:
               memory: "500Mi"
-              cpu: "500m"
+              cpu: "200m"
             limits:
-              memory: "100Mi"
-              cpu: "1000m"
+              memory: "1000Mi"
+              cpu: "5000m"
           envFrom:
             - configMapRef:
                 name: spotme-config
+            - configMapRef:
+                name: ${appname}-config
             - secretRef:
                 name: spotme-db-secrets
       imagePullSecrets:

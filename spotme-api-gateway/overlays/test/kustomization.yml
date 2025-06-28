@@ -10,7 +10,7 @@ commonLabels:
 resources:
   - ../../base
   - spotme-configmap.yml
-  - spotme-rest-service-test.yml
+  - spotme-rest-service.yml
   
 images:
   - name: app-image
