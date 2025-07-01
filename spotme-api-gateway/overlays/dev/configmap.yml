@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: ${parameters['appname']}-config
+  name: spotme-config
   annotations:
     strategy.spinnaker.io/versioned: 'false'
     strategy.spinnaker.io/recreate: 'true'

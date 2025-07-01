@@ -6,9 +6,5 @@ metadata:
       strategy.spinnaker.io/recreate: 'true'
 spec:
   type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30280
-  selector:
+  selector: 
     app: ${appname}

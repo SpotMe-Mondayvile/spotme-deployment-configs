@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
-  name: spotme-web-deployment
+  name: ${parameters['']}
   namespace: spotme-dev
   annotations:
     strategy.spinnaker.io/recreate: 'true'

@@ -19,10 +19,18 @@ spec:
     spec:
       containers:
         - name: ${appname}
-          image: app-image
-          ports:
-            - containerPort: 8080
-  replicas: 1
-  selector:
-    matchLabels:
-      app: ${appname}
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "200m"
+            limits:
+              memory: "500Mi"
+              cpu: "400m"
+          envFrom:
+            - configMapRef:
+                name: spotme-config
+            - secretRef:
+                name: spotme-db-secrets
+      imagePullSecrets:
+        - name: jfrog-dev

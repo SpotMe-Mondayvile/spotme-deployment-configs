@@ -13,5 +13,3 @@ data:
   FRIENDS_SVC_URL: spotme-friends-svc.spotme-${environment}.svc.cluster.local  
   AUTH_SVC_URL: spotme-auth-svc.spotme-${environment}.svc.cluster.local
   UI_SVC: spotme-ui-svc.spotme-${environment}.svc.cluster.local
-
-
