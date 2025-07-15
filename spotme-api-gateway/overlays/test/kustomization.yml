@@ -9,7 +9,7 @@ commonLabels:
 
 resources:
   - ../../base
-  - configmap.yml
+  # - configmap.yml
   
 images:
   - name: app-image
