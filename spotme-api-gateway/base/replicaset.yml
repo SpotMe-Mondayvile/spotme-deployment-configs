@@ -25,7 +25,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: spotme-config
-            - configMapREf:
+            - configMapRef:
                 name: ${appname}-config
             - secretRef:
                 name: spotme-db-secrets            
