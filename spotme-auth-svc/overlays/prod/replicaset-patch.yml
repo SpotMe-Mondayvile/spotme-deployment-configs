@@ -22,15 +22,10 @@ spec:
           imagePullPolicy: Always
           resources:
             requests:
-              memory: "1000Mi"
-              cpu: "500m"
+              memory: "200Mi"
+              cpu: "200m"
             limits:
-              memory: "3000Mi"
-              cpu: "1000m"
-          envFrom:
-            - configMapRef:
-                name: spotme-config
-            - secretRef:
-                name: spotme-db-secrets
+              memory: "500Mi"
+              cpu: "400m"
       imagePullSecrets:
         - name: jfrog-dev
