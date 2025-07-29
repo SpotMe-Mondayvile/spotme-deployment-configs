@@ -1,10 +1,9 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: ${appname}
   namespace: ${namespace}
   annotations:
-    strategy.spinnaker.io/versioned: 'false'
     strategy.spinnaker.io/recreate: 'true'
   labels:
     app: ${label}
@@ -12,8 +11,6 @@ spec:
   selector:
     matchLabels:
       app: ${label}
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
