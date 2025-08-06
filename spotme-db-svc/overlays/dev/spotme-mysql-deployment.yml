@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
   name: ${appname}
   namespace: ${namespace}
@@ -9,6 +9,7 @@ metadata:
   labels:
     app: ${appname}
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: ${appname}
