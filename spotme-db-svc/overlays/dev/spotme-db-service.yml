@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: ${appname}
   labels:
-    app: db-service
+    app: ${appname}
 spec:
   type: NodePort
   selector:
-    app: spotme-db
+    app: ${appname}
   ports:
     - port: 3306
       targetPort: 3306
