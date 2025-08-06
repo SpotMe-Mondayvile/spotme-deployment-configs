@@ -5,6 +5,7 @@ metadata:
   namespace: ${namespace}
   annotations:
     strategy.spinnaker.io/recreate: 'true'
+    strategy.spinnaker.io/versioned: 'false'
   labels:
     app: ${appname}
 spec:
