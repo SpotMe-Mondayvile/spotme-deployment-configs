@@ -9,6 +9,7 @@ commonLabels:
 
 resources:
   - ../../base
+  - namespace.yml
   - spotme-configmap.yml
   - spotme-myqsql-pv-dev.yml
   - spotme-myqsql-pvc-dev.yml
