@@ -10,5 +10,5 @@ resources:
   - ../../base
   - namespace.yml
   - spotme-configmap.yml
-  - spotme-myqsql-pv-prod.yml
-  - spotme-myqsql-pvc-prod.yml
+  - spotme-mysql-pv-prod.yml
+  - spotme-mysql-pvc-prod.yml
