@@ -11,8 +11,8 @@ resources:
   - ../../base
   - namespace.yml
   - spotme-configmap.yml
-  - spotme-myqsql-pv-test.yml
-  - spotme-myqsql-pvc-test.yml
+  - spotme-mysql-pv-test.yml
+  - spotme-mysql-pvc-test.yml
 
 # patches:
 
