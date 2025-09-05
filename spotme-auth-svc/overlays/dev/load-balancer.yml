@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: ${parameters['appname']}-lb
   labels:
-    app: spotme-auth-svc
+    app: ${parameters['appname']}
 spec:
   type: LoadBalancer
   selector:
