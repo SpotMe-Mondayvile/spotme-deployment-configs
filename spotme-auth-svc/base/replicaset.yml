@@ -27,7 +27,7 @@ spec:
               value: k8s
           envFrom:
             - configMapRef:
-                name: spotme-config
+                name: ${parameters['appname']}-config  
             - configMapRef:
                 name: ${parameters['appname']}-properties
             - secretRef:
