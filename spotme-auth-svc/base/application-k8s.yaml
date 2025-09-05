@@ -1,8 +1,6 @@
 spring:
-  profiles:
-    active: k8s
-  config:
-    import: optional:file:.env[.properties]
+  mvc:
+    dispatch-options-request: true  
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
@@ -36,9 +34,5 @@ spotme:
 
 server:
   port: ${SERVER_PORT}
-
-spring:
-  mvc:
-    dispatch-options-request: true
 
 # Local

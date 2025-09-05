@@ -18,11 +18,6 @@ images:
     newName: ${image}
     # newTag: "develop"\
 
-configMapGenerator:
-  - name: ${parameters['appname']}-properties
-    behavior: merge
-    files:
-      - application-k8s.yaml
 
 patches:
 - replicaset-patch.yml 
