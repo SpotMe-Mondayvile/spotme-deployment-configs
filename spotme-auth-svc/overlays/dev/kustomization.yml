@@ -20,6 +20,7 @@ images:
 
 configMapGenerator:
   - name: ${parameters['appname']}-properties
+    behavior: merge
     files:
       - application-k8s.yaml
 
