@@ -31,7 +31,13 @@ spec:
             - configMapRef:
                 name: ${parameters['appname']}-properties
             - secretRef:
-                name: spotme-db-secrets            
+                name: spotme-db-secrets
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10                     
   replicas: 1
   selector:
     matchLabels:
