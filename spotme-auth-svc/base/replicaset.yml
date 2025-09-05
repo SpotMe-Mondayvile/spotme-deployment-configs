@@ -29,7 +29,7 @@ spec:
             - configMapRef:
                 name: spotme-config
             - configMapRef:
-                name: ${parameters['appname']}-config
+                name: ${parameters['appname']}-properties
             - secretRef:
                 name: spotme-db-secrets            
   replicas: 1

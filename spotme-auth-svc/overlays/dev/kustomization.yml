@@ -10,6 +10,8 @@ commonLabels:
 resources:
   - ../../base
   - configmap.yml
+  - ingress.yml
+  - load-balancer.yml
   
 images:
   - name: app-image
@@ -17,11 +19,10 @@ images:
     # newTag: "develop"\
 
 configMapGenerator:
-  - name: ${parameters['appname']}-config
+  - name: ${parameters['appname']}-properties
     files:
       - application-k8s.yaml
 
 patches:
 - replicaset-patch.yml 
 - service-patch.yml
-
