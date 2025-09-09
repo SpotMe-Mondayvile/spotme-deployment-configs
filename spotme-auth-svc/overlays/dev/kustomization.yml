@@ -10,7 +10,7 @@ commonLabels:
 resources:
   - ../../base
   - configmap.yml
-  - ingress.yml
+  # - ingress.yml
   - load-balancer.yml
   
 images:
