@@ -33,4 +33,4 @@ spotme:
     uiorigin: ${UI_ORIGIN}
 
 server:
-  port: ${SERVER_PORT} #Local
+  port: ${SERVER_PORT}
