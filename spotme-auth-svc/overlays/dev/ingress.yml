@@ -9,7 +9,7 @@ spec:
     - host: ${parameters['appname']}.dev.mts-local.com
       http:
         paths:
-          - path: /
+          - path: /auth-ingress
             pathType: Prefix
             backend:
               service:
