@@ -16,4 +16,4 @@ data:
   UI_ORIGIN: https://ui-dev.spot-me-app.com
   DEV_URL: https://rest-dev.spot-me-app.com
   PROD_URL: "https://rest-dev.spot-me-app.com"
-  NODE_URL: "http://${cluster}.local"
+  NODE_URL: "http://${cluster}.local:30201"
