@@ -15,6 +15,7 @@ spec:
       name: ${appname}
       labels:
         app: ${appname}
+        svc: ${appname}
         type: back-end
     spec:
       containers:
