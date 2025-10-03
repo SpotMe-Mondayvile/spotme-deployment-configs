@@ -25,7 +25,7 @@ spec:
               memory: "200Mi"
               cpu: "200m"
             limits:
-              memory: "500Mi"
-              cpu: "400m"
+              memory: "1000Mi"
+              cpu: "700m"
       imagePullSecrets:
         - name: jfrog-dev
