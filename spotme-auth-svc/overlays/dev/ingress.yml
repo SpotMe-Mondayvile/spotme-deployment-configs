@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: public
 spec:
   rules:
-    - host: ${parameters['appname']}.${parameters['cluster']}magus.lab
+    - host: ${parameters['appname']}.${parameters['cluster']}.magus.lab
       http:
         paths:
           - path: /auth-ingress
