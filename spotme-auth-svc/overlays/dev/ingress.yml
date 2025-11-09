@@ -17,3 +17,10 @@ spec:
                 name: spotme-auth-svc
                 port:
                   number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: spotme-auth-svc
+                port:
+                  number: 80        
