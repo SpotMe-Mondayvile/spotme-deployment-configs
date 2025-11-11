@@ -3,3 +3,11 @@ kind: Kustomization
 resources: 
 - replicaset.yml
 - service.yml
+
+configMapGenerator:
+  - name: ${parameters['appname']}-properties
+    files:
+      - application-k8s.yaml
+generatorOptions:
+  annotations:
+    strategy.spinnaker.io/versioned: 'false'

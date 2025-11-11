@@ -15,6 +15,7 @@ spec:
       name: ${appname}
       labels:
         app: ${appname}
+        svc: ${appname}
         type: back-end
     spec:
       containers:
@@ -22,11 +23,26 @@ spec:
           image: app-image
           ports:
             - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: k8s
+            - name: MY_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
           envFrom:
             - configMapRef:
-                name: spotme-config
+                name: ${parameters['appname']}-config  
+            - configMapRef:
+                name: ${parameters['appname']}-properties
             - secretRef:
-                name: spotme-db-secrets            
+                name: spotme-db-secrets
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10                     
   replicas: 1
   selector:
     matchLabels:

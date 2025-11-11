@@ -27,10 +27,5 @@ spec:
             limits:
               memory: "500Mi"
               cpu: "400m"
-          envFrom:
-            - configMapRef:
-                name: spotme-config
-            - secretRef:
-                name: spotme-db-secrets
       imagePullSecrets:
         - name: jfrog-dev

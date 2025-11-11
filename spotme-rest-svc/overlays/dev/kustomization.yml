@@ -10,13 +10,15 @@ commonLabels:
 resources:
   - ../../base
   - configmap.yml
+  - ingress.yml
+  - load-balancer.yml
   
 images:
   - name: app-image
-    newName: containerregistry.spot-me-app.com/spotme/spotme-rest
-    newTag: "develop"
+    newName: ${image}
+    # newTag: "develop"\
+
 
 patches:
 - replicaset-patch.yml 
 - service-patch.yml
-
