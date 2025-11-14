@@ -35,14 +35,14 @@ spec:
           # --- ADDED PROBES HERE ---
           readinessProbe:
             httpGet:
-              path: /actuator/info
+              path: /actuator
               port: 8080
             initialDelaySeconds: 60 # Time to wait before first readiness check
             periodSeconds: 5        # How often to perform the check
             timeoutSeconds: 3       # Timeout for the request
           livenessProbe:
             httpGet:
-              path: /actuator/info
+              path: /actuator
               port: 8080
             initialDelaySeconds: 60 # Allow more time for initial startup
             periodSeconds: 10       # How often to perform the check

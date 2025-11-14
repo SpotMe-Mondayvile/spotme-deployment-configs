@@ -17,3 +17,4 @@ data:
   DEV_URL: https://rest-dev.spot-me-app.com
   PROD_URL: "https://rest-dev.spot-me-app.com"
   GATE_WAY_ROUTE: "/rest"
+  GATE_WAY_URL: spotme-rest-svc.spotme-${environment}.svc.cluster.local
