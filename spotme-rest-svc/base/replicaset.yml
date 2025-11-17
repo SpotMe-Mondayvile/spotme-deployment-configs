@@ -31,17 +31,17 @@ spec:
             httpGet:
               path: /actuator/health
               port: 8080
-            initialDelaySeconds: 60 # Time to waits before first readiness check
-            periodSeconds: 5        # How often to perform the check
-            timeoutSeconds: 3       # Timeout for the request
+            initialDelaySeconds: 120 # Time to waits before first readiness check
+            periodSeconds:  30       # How often to perform the check
+            timeoutSeconds: 10       # Timeout for the request
           livenessProbe:
             httpGet:
               path: /actuator/health
               port: 8080
-            initialDelaySeconds: 60 # Allow more time for initial startup
-            periodSeconds: 10       # How often to perform the check
-            failureThreshold: 5     # Number of consecutive failures before restarting
-            timeoutSeconds: 3                  
+            initialDelaySeconds: 240 # Allow more time for initial startup
+            periodSeconds: 30       # How often to perform the check
+            failureThreshold: 7     # Number of consecutive failures before restarting
+            timeoutSeconds: 10                  
   replicas: 1
   selector:
     matchLabels:
