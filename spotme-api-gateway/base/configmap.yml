@@ -7,10 +7,10 @@ metadata:
     strategy.spinnaker.io/recreate: 'true'
 data:
   BASE_URL: https://gate-${environment}.spotme-app.com
-  USER_SVC_URL: spotme-user-svc.spotme-${environment}.svc.cluster.local  
-  MATCH_SVC_URL: spotme-match-svc.spotme-${environment}.svc.cluster.local  
-  GYM_SVC_URL: spotme-gym-svc.spotme-${environment}.svc.cluster.local  
-  FRIENDS_SVC_URL: spotme-friends-svc.spotme-${environment}.svc.cluster.local  
-  AUTH_SVC_URL: spotme-auth-svc.spotme-${environment}.svc.cluster.local
-  REST_SVC_URL: spotme-rest-svc.spotme-${environment}.svc.cluster.local
-  UI_SVC: spotme-ui-svc.spotme-${environment}.svc.cluster.local
+  USER_SVC_URL: http://spotme-user-svc.spotme-${environment}.svc.cluster.local  
+  MATCH_SVC_URL: http://spotme-match-svc.spotme-${environment}.svc.cluster.local  
+  GYM_SVC_URL: http://spotme-gym-svc.spotme-${environment}.svc.cluster.local  
+  FRIENDS_SVC_URL: http://spotme-friends-svc.spotme-${environment}.svc.cluster.local  
+  AUTH_SVC_URL: http://spotme-auth-svc.spotme-${environment}.svc.cluster.local
+  REST_SVC_URL: http://spotme-rest-svc.spotme-${environment}.svc.cluster.local
+  UI_SVC: http://spotme-ui-svc.spotme-${environment}.svc.cluster.local
