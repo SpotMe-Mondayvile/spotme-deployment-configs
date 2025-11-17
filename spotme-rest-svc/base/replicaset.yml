@@ -33,13 +33,11 @@ spec:
               port: 8080
             initialDelaySeconds: 120 # Time to waits before first readiness check
             periodSeconds:  30       # How often to perform the check
-            timeoutSeconds: 10
-            scheme: "HTTP"       # Timeout for the request
+            timeoutSeconds: 10     # Timeout for the request
           livenessProbe:
             httpGet:
               path: "/actuator/health"
               port: 8080
-              scheme: "HTTP"
             initialDelaySeconds: 240 # Allow more time for initial startup
             periodSeconds: 30       # How often to perform the check
             failureThreshold: 7     # Number of consecutive failures before restarting
