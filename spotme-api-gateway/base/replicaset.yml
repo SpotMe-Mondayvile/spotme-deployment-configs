@@ -24,8 +24,6 @@ spec:
             - containerPort: 8080
           envFrom:
             - configMapRef:
-                name: spotme-config
-            - configMapRef:
                 name: ${appname}-config
             - secretRef:
                 name: spotme-db-secrets            
