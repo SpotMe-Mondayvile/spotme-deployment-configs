@@ -14,7 +14,6 @@ resources:
 images:
   - name: app-image
     newName: ${image}
-    newTag: "release"
 
 patches:
 - replicaset-patch.yml 
