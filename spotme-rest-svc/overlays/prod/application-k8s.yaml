@@ -29,16 +29,24 @@ springdoc:
     enabled: true 
     path: /swagger-ui-custom.html
 
-env-props:
+spotme:
+  openapi: 
+    version: 2.0.2
+    dev-url: ${DEV_URL}
+    local: http://localhost:8080
+    origin: ${REST_ORIGIN}
+    prod-url: ${PROD_URL}
+    uiorigin: ${UI_ORIGIN}
+  env-props:
     environment: K8S
     jwt-secret-key: ${JWT_SECRET_KEY}
-    dev-url: ${DEV_URL:http://localhost:8081}
+    dev-url: ${DEV_URL:http://localhost:8080}
     prod-url: ${PROD_URL:https://rest.spot-me-app.com}
-    origin: ${ORIGIN:http://localhost:8081}
+    origin: ${ORIGIN:http://localhost:8080}
     gateway-url: ${GATE_WAY_URL:http://localhost:8080}
-    gateway-path: ${GATE_WAY_PATH:/auth}
-    server-port: ${SERVER_PORT:8081}
-    node-url: ${NODE_URL:http://${cluster}.magus.lab}
+    gateway-path: ${GATE_WAY_PATH:/rest}
+    server-port: ${SERVER_PORT:8080}
+    node-url: ${NODE_URL:http://mkp-d1-c01.magus.lab}  
 
 server:
   port: ${SERVER_PORT}

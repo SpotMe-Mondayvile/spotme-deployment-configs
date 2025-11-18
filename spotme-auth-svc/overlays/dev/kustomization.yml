@@ -17,7 +17,7 @@ images:
     # newTag: "develop"\
 
 configMapGenerator:
-  - name: ${parameters['appname']}-config
+  - name: ${parameters['appname']}-properties
     files:
       - application-k8s.yaml
 
