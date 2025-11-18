@@ -14,6 +14,11 @@ resources:
 images:
   - name: app-image
     newName: ${image}
+  
+configMapGenerator:
+  - name: ${parameters['appname']}-properties
+    files:
+      - application-k8s.yaml
 
 patches:
 - replicaset-patch.yml 

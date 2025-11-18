@@ -17,6 +17,10 @@ spec:
         app: ${appname}
         type: back-end
     spec:
+      volumes:
+          - name: ${parameters['appname']}-properties
+            configMap:
+              name: ${parameters['appname']}-properties
       containers:
         - name: ${appname}
           image: app-image
@@ -26,7 +30,11 @@ spec:
             - configMapRef:
                 name: ${parameters['appname']}-config
             - secretRef:
-                name: spotme-db-secrets     
+                name: spotme-db-secrets  
+          volumeMounts:
+          - name: ${parameters['appname']}-properties
+            mountPath: /config # The directory path inside the container
+            readOnly: true         
           readinessProbe:
             httpGet:
               path: /actuator/health
