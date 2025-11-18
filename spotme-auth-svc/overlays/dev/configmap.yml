@@ -18,3 +18,4 @@ data:
   PROD_URL: "https://rest-dev.spot-me-app.com"
   GATE_WAY_URL: "${cluster}.magus.lab:30200"
   GATE_WAY_PATH: "/auth"
+  NODE_URL: ${cluster}.magus.lab
