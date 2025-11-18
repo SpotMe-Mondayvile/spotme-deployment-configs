@@ -28,7 +28,6 @@ springdoc:
   swagger-ui:
     enabled: true 
     path: /swagger-ui-custom.html
-
 spotme:
   openapi: 
     version: 2.0.2
@@ -46,7 +45,7 @@ spotme:
     gateway-url: ${GATE_WAY_URL:http://localhost:8080}
     gateway-path: ${GATE_WAY_PATH:/rest}
     server-port: ${SERVER_PORT:8080}
-    node-url: ${NODE_URL:http://mkp-d1-c01.magus.lab}  
+    node-url: ${NODE_URL:http://${cluster}.magus.lab} 
 
 server:
   port: ${SERVER_PORT}
