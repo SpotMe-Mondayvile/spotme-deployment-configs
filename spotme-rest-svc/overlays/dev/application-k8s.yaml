@@ -48,6 +48,5 @@ spotme:
     node-url: ${NODE_URL:http://${cluster}.magus.lab} 
 
 server:
-  port: ${SERVER_PORT}
-
+  port: ${SERVER_PORT:8087}
 # Local
